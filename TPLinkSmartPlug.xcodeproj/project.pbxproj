@@ -8,8 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		EF63D51B1E645D0700152559 /* TPLinkSmartPlug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF63D5111E645D0700152559 /* TPLinkSmartPlug.framework */; };
-		EF63D5201E645D0700152559 /* TPLinkSmartPlugTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63D51F1E645D0700152559 /* TPLinkSmartPlugTests.swift */; };
 		EF63D5221E645D0700152559 /* TPLinkSmartPlug.h in Headers */ = {isa = PBXBuildFile; fileRef = EF63D5141E645D0700152559 /* TPLinkSmartPlug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF63D52C1E645D1D00152559 /* SmartDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63D52B1E645D1D00152559 /* SmartDevice.swift */; };
+		EF63D5301E645D8600152559 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63D52F1E645D8600152559 /* Device.swift */; };
+		EF63D5331E645ECD00152559 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF63D5321E645ECD00152559 /* CocoaAsyncSocket.framework */; };
+		EF63D5371E64605800152559 /* SmartDeviceExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63D5361E64605800152559 /* SmartDeviceExplorer.swift */; };
+		EF63D53B1E64666D00152559 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF63D5321E645ECD00152559 /* CocoaAsyncSocket.framework */; };
+		EF63D53D1E6472AF00152559 /* SmartDeviceExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63D53C1E6472AF00152559 /* SmartDeviceExplorerTests.swift */; };
+		EF63D5401E64757E00152559 /* SmartPlugJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63D53E1E64757E00152559 /* SmartPlugJSON.swift */; };
+		EF63D5411E64757E00152559 /* TPLinkSmartHomeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63D53F1E64757E00152559 /* TPLinkSmartHomeProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +34,14 @@
 		EF63D5141E645D0700152559 /* TPLinkSmartPlug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPLinkSmartPlug.h; sourceTree = "<group>"; };
 		EF63D5151E645D0700152559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF63D51A1E645D0700152559 /* TPLinkSmartPlugTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TPLinkSmartPlugTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF63D51F1E645D0700152559 /* TPLinkSmartPlugTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPLinkSmartPlugTests.swift; sourceTree = "<group>"; };
 		EF63D5211E645D0700152559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF63D52B1E645D1D00152559 /* SmartDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartDevice.swift; sourceTree = "<group>"; };
+		EF63D52F1E645D8600152559 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		EF63D5321E645ECD00152559 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/iOS/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
+		EF63D5361E64605800152559 /* SmartDeviceExplorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartDeviceExplorer.swift; sourceTree = "<group>"; };
+		EF63D53C1E6472AF00152559 /* SmartDeviceExplorerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartDeviceExplorerTests.swift; sourceTree = "<group>"; };
+		EF63D53E1E64757E00152559 /* SmartPlugJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartPlugJSON.swift; sourceTree = "<group>"; };
+		EF63D53F1E64757E00152559 /* TPLinkSmartHomeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPLinkSmartHomeProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF63D5331E645ECD00152559 /* CocoaAsyncSocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF63D53B1E64666D00152559 /* CocoaAsyncSocket.framework in Frameworks */,
 				EF63D51B1E645D0700152559 /* TPLinkSmartPlug.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +68,7 @@
 		EF63D5071E645D0700152559 = {
 			isa = PBXGroup;
 			children = (
+				EF63D5311E645EA900152559 /* Frameworks */,
 				EF63D5131E645D0700152559 /* TPLinkSmartPlug */,
 				EF63D51E1E645D0700152559 /* TPLinkSmartPlugTests */,
 				EF63D5121E645D0700152559 /* Products */,
@@ -72,6 +88,11 @@
 			isa = PBXGroup;
 			children = (
 				EF63D5141E645D0700152559 /* TPLinkSmartPlug.h */,
+				EF63D52B1E645D1D00152559 /* SmartDevice.swift */,
+				EF63D5361E64605800152559 /* SmartDeviceExplorer.swift */,
+				EF63D53E1E64757E00152559 /* SmartPlugJSON.swift */,
+				EF63D53F1E64757E00152559 /* TPLinkSmartHomeProtocol.swift */,
+				EF63D52F1E645D8600152559 /* Device.swift */,
 				EF63D5151E645D0700152559 /* Info.plist */,
 			);
 			path = TPLinkSmartPlug;
@@ -80,10 +101,18 @@
 		EF63D51E1E645D0700152559 /* TPLinkSmartPlugTests */ = {
 			isa = PBXGroup;
 			children = (
-				EF63D51F1E645D0700152559 /* TPLinkSmartPlugTests.swift */,
+				EF63D53C1E6472AF00152559 /* SmartDeviceExplorerTests.swift */,
 				EF63D5211E645D0700152559 /* Info.plist */,
 			);
 			path = TPLinkSmartPlugTests;
+			sourceTree = "<group>";
+		};
+		EF63D5311E645EA900152559 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF63D5321E645ECD00152559 /* CocoaAsyncSocket.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +137,7 @@
 				EF63D50D1E645D0700152559 /* Frameworks */,
 				EF63D50E1E645D0700152559 /* Headers */,
 				EF63D50F1E645D0700152559 /* Resources */,
+				EF63D5341E645EE400152559 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -125,6 +155,7 @@
 				EF63D5161E645D0700152559 /* Sources */,
 				EF63D5171E645D0700152559 /* Frameworks */,
 				EF63D5181E645D0700152559 /* Resources */,
+				EF63D5381E64611F00152559 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -149,6 +180,7 @@
 					EF63D5101E645D0700152559 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 9269KSNZG8;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					EF63D5191E645D0700152559 = {
@@ -193,11 +225,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EF63D5341E645EE400152559 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/CocoaAsyncSocket.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		EF63D5381E64611F00152559 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/CocoaAsyncSocket.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EF63D50C1E645D0700152559 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF63D5411E64757E00152559 /* TPLinkSmartHomeProtocol.swift in Sources */,
+				EF63D52C1E645D1D00152559 /* SmartDevice.swift in Sources */,
+				EF63D5301E645D8600152559 /* Device.swift in Sources */,
+				EF63D5371E64605800152559 /* SmartDeviceExplorer.swift in Sources */,
+				EF63D5401E64757E00152559 /* SmartPlugJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF63D5201E645D0700152559 /* TPLinkSmartPlugTests.swift in Sources */,
+				EF63D53D1E6472AF00152559 /* SmartDeviceExplorerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,18 +390,24 @@
 		EF63D5261E645D0700152559 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9269KSNZG8;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TPLinkSmartPlug/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.colharris.TPLinkSmartPlug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,12 +415,17 @@
 		EF63D5271E645D0700152559 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9269KSNZG8;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TPLinkSmartPlug/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -360,7 +439,12 @@
 		EF63D5291E645D0700152559 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 9269KSNZG8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TPLinkSmartPlugTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.colharris.TPLinkSmartPlugTests;
@@ -372,7 +456,12 @@
 		EF63D52A1E645D0700152559 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 9269KSNZG8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TPLinkSmartPlugTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.colharris.TPLinkSmartPlugTests;
@@ -400,6 +489,7 @@
 				EF63D5271E645D0700152559 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF63D5281E645D0700152559 /* Build configuration list for PBXNativeTarget "TPLinkSmartPlugTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +498,7 @@
 				EF63D52A1E645D0700152559 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
