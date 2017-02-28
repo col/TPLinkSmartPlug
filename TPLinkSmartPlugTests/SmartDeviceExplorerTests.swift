@@ -12,7 +12,7 @@ import XCTest
 class SmartDeviceExplorerTests: XCTestCase {
     
     func testFindDevices() throws {
-        let explorer = try SmartDeviceExplorer(broadcastIp: "")
+        let explorer = try SmartDeviceExplorer(host: "255.255.255.255", port: UInt16(9999), timeout: 3)
         let exp = expectation(description: "findDevices")
         
         var foundDevices: [Device]?
@@ -20,8 +20,13 @@ class SmartDeviceExplorerTests: XCTestCase {
             foundDevices = devices
             exp.fulfill()
         }
-        waitForExpectations(timeout: 6) { (error) in
-            XCTAssert(foundDevices!.count == 0)
+        
+        waitForExpectations(timeout: 4) { (error) in
+            XCTAssert(foundDevices!.count == 2)
+            for device in foundDevices! {
+                print("Device Host: \(device.ip) Port: \(device.port)")
+                print("Device Info: \(device.sysInfo)")
+            }
         }
     }
     

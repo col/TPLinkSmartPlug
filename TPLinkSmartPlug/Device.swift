@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Device {
+public struct Device {
     var ip: String
     var port: UInt16
     var sysInfo: [String: Any]

@@ -9,33 +9,41 @@
 import Foundation
 import CocoaAsyncSocket
 
-class SmartDeviceExplorer: NSObject, GCDAsyncUdpSocketDelegate {
+public class SmartDeviceExplorer: NSObject, GCDAsyncUdpSocketDelegate {
     
-    static let host = "255.255.255.255"
-    static let port: UInt16 = 9999
+    static let DEFAULT_BROADCAST_HOST = "255.255.255.255"
+    static let DEFAULT_BROADCAST_PORT = UInt16(9999)
+    static let DEFAULT_TIMEOUT = 5
     
+    let host: String
+    let port: UInt16
+    let timeout: Int
     var socket: GCDAsyncUdpSocket!
     var devices = [Device]()
     
-    init(broadcastIp: String) throws {
+    public init(host: String = DEFAULT_BROADCAST_HOST, port: UInt16 = DEFAULT_BROADCAST_PORT, timeout: Int = DEFAULT_TIMEOUT) throws {
+        self.host = host
+        self.port = port
+        self.timeout = timeout
         super.init()
         socket = GCDAsyncUdpSocket.init(delegate: self, delegateQueue: DispatchQueue.main)
         try socket.enableBroadcast(true)
         try socket.enableReusePort(true)
     }    
     
-    func findDevices(callback: ([Device]) -> Void) throws {
+    public func findDevices(callback: @escaping ([Device]) -> Void) throws {
         
         let requestString = "{\"emeter\": {\"get_realtime\": null}, \"system\": {\"get_sysinfo\": null}}"
         let encryptedData = TPLinkSmartHomeProtocol.encrypt(content: requestString, includeLength: false)
         
-        socket.send(encryptedData, toHost: SmartDeviceExplorer.host, port: SmartDeviceExplorer.port, withTimeout: 5, tag: 1)
+        socket.send(encryptedData, toHost: host, port: port, withTimeout: TimeInterval(timeout+1), tag: 1)
         try socket.beginReceiving()
         
-        // TODO: better way to wait for a response ?
-        sleep(3)
-        
-        callback( [Device]() )
+        let callbackTime = DispatchTime.now() + .seconds(timeout)
+        DispatchQueue.main.asyncAfter(deadline: callbackTime) {
+            self.socket.close()
+            callback(self.devices)
+        }
     }
     
     public func udpSocket(_ sock: GCDAsyncUdpSocket, didConnectToAddress address: Data) {
@@ -56,13 +64,13 @@ class SmartDeviceExplorer: NSObject, GCDAsyncUdpSocketDelegate {
     
     public func udpSocket(_ sock: GCDAsyncUdpSocket, didReceive data: Data, fromAddress address: Data, withFilterContext filterContext: Any?) {
         print("didReceive")
-        let jsonString = TPLinkSmartHomeProtocol.decrypt(data: data)
+        let host = GCDAsyncUdpSocket.host(fromAddress: address)!
+        let port = GCDAsyncUdpSocket.port(fromAddress: address)
+        let jsonString = TPLinkSmartHomeProtocol.decrypt(data: data, includesLength: false)
         if let sysInfo = SmartPlugJSON.fromJson(jsonString) {
-            var host: NSString?
-            var port: UInt16 = 0
-            GCDAsyncUdpSocket.getHost(&host, port: &port, fromAddress: address)
-            let device = Device(ip: host as! String, port: port, sysInfo: sysInfo)
-            self.devices.append(device)
+            self.devices.append(Device(ip: host, port: port, sysInfo: sysInfo))
+        } else {
+            print("Error parsing device info")
         }
     }
     

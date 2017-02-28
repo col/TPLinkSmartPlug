@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D201377E1E6532D000169AAE /* SmartDeviceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D201377D1E6532D000169AAE /* SmartDeviceTests.swift */; };
 		EF63D51B1E645D0700152559 /* TPLinkSmartPlug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF63D5111E645D0700152559 /* TPLinkSmartPlug.framework */; };
 		EF63D5221E645D0700152559 /* TPLinkSmartPlug.h in Headers */ = {isa = PBXBuildFile; fileRef = EF63D5141E645D0700152559 /* TPLinkSmartPlug.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF63D52C1E645D1D00152559 /* SmartDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63D52B1E645D1D00152559 /* SmartDevice.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D201377D1E6532D000169AAE /* SmartDeviceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartDeviceTests.swift; sourceTree = "<group>"; };
 		EF63D5111E645D0700152559 /* TPLinkSmartPlug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TPLinkSmartPlug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF63D5141E645D0700152559 /* TPLinkSmartPlug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPLinkSmartPlug.h; sourceTree = "<group>"; };
 		EF63D5151E645D0700152559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		EF63D51E1E645D0700152559 /* TPLinkSmartPlugTests */ = {
 			isa = PBXGroup;
 			children = (
+				D201377D1E6532D000169AAE /* SmartDeviceTests.swift */,
 				EF63D53C1E6472AF00152559 /* SmartDeviceExplorerTests.swift */,
 				EF63D5211E645D0700152559 /* Info.plist */,
 			);
@@ -179,13 +182,11 @@
 				TargetAttributes = {
 					EF63D5101E645D0700152559 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 9269KSNZG8;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					EF63D5191E645D0700152559 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 9269KSNZG8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -232,13 +233,12 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/CocoaAsyncSocket.framework",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "carthage-copy-frameworks";
 		};
 		EF63D5381E64611F00152559 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -246,13 +246,12 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/CocoaAsyncSocket.framework",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "carthage-copy-frameworks";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -274,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF63D53D1E6472AF00152559 /* SmartDeviceExplorerTests.swift in Sources */,
+				D201377E1E6532D000169AAE /* SmartDeviceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +393,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 9269KSNZG8;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -418,7 +418,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 9269KSNZG8;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -440,7 +440,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 9269KSNZG8;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -457,7 +457,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 9269KSNZG8;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
