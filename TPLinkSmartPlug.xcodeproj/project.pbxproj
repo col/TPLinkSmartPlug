@@ -132,9 +132,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		EF63D5101E645D0700152559 /* TPLinkSmartPlug */ = {
+		EF63D5101E645D0700152559 /* iOS TPLinkSmartPlug */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EF63D5251E645D0700152559 /* Build configuration list for PBXNativeTarget "TPLinkSmartPlug" */;
+			buildConfigurationList = EF63D5251E645D0700152559 /* Build configuration list for PBXNativeTarget "iOS TPLinkSmartPlug" */;
 			buildPhases = (
 				EF63D50C1E645D0700152559 /* Sources */,
 				EF63D50D1E645D0700152559 /* Frameworks */,
@@ -146,7 +146,7 @@
 			);
 			dependencies = (
 			);
-			name = TPLinkSmartPlug;
+			name = "iOS TPLinkSmartPlug";
 			productName = TPLinkSmartPlug;
 			productReference = EF63D5111E645D0700152559 /* TPLinkSmartPlug.framework */;
 			productType = "com.apple.product-type.framework";
@@ -203,7 +203,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EF63D5101E645D0700152559 /* TPLinkSmartPlug */,
+				EF63D5101E645D0700152559 /* iOS TPLinkSmartPlug */,
 				EF63D5191E645D0700152559 /* TPLinkSmartPlugTests */,
 			);
 		};
@@ -282,7 +282,7 @@
 /* Begin PBXTargetDependency section */
 		EF63D51D1E645D0700152559 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EF63D5101E645D0700152559 /* TPLinkSmartPlug */;
+			target = EF63D5101E645D0700152559 /* iOS TPLinkSmartPlug */;
 			targetProxy = EF63D51C1E645D0700152559 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -405,7 +405,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.colharris.TPLinkSmartPlug;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -430,7 +430,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.colharris.TPLinkSmartPlug;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -482,7 +482,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EF63D5251E645D0700152559 /* Build configuration list for PBXNativeTarget "TPLinkSmartPlug" */ = {
+		EF63D5251E645D0700152559 /* Build configuration list for PBXNativeTarget "iOS TPLinkSmartPlug" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EF63D5261E645D0700152559 /* Debug */,
